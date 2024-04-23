@@ -5,4 +5,6 @@ and supported by the German Centre for Integrative Biodiversity Research (iDiv).
 
 This repository documents the code used to: prepare the demographic rates of oak in femel survey plots and in the ambient forest, generate an initial state of the existing oak trees in the Sachsenforst femels, and run the PPA model for each model scenario. The raw data processing and initial calculation of the ambient demographic rates from the Lebendige Luppe data was done by Lucian Elles (2024).
 
-The data used in this work is not openly accessible (except for the tree inventory data collected in oak femels in 2023). Please contact the authors to discuss access to the other original data. Please note that every occurrence of "[insert file path]" indicates a place where the local file path must be provided.
+The full data used in this work is not yet openly accessible (except for the tree inventory data collected in oak femels). Please contact the authors to discuss access to the other original data.
+
+Please note that every occurrence of "[insert file path]" indicates a place where the local file path must be provided.
