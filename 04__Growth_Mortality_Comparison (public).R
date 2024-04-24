@@ -118,12 +118,11 @@ Sachsenforst_Paußnitz_condensed <- Growth_rates %>%
   mutate(Femel_size = case_when(
     as.character(PlotID) %in% c("18") ~ "0.3",
     TRUE ~ as.character(Femel_size))) %>%
-  select(PlotID, Shaded, Species, `Planting Year`, Femel_size, `Census Period 3 Growth`, `Age Census Period 3`) %>%
-  rename(Growth_Rate = `Census Period 3 Growth`, Age = `Age Census Period 3`, Planting_Year = `Planting Year`) %>%
+  select(PlotID, Shaded, Species, `Planting Year`, Femel_size, `Age Census Period 2`,`Census Period 3 Growth`) %>%
+  rename(Growth_Rate = `Census Period 3 Growth`, Age = `Age Census Period 2`, Planting_Year = `Planting Year`) %>%
   rbind(P_simplified) %>% filter(Shaded != "p") %>% filter(PlotID == "15" | PlotID == "16" | PlotID == "17"  | PlotID == "18" | PlotID == "P") %>% 
   mutate(Shaded = case_when(as.character(Shaded) %in% "n" ~ "overstory", TRUE ~ as.character(Shaded)),
-  Shaded = case_when(as.character(Shaded) %in% "y" ~ "understory",
-  TRUE ~ as.character(Shaded)))
+         Shaded = case_when(as.character(Shaded) %in% "y" ~ "understory", TRUE ~ as.character(Shaded)))
 
 Sachsenforst_Paußnitz_condensed$Planting_Year <- as.numeric(Sachsenforst_Paußnitz_condensed$Planting_Year)
 Sachsenforst_Paußnitz_condensed$`Growth_Rate` <- as.numeric(Sachsenforst_Paußnitz_condensed$`Growth_Rate`)
