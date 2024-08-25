@@ -28,39 +28,7 @@ optim(par=c(mean(X),sd(X)),
 dat = read.table("auwald_data_femel_Sachsenforst_2023.txt", header=T)
 unique(dat$PlotID)
 
-# 10,13,14,15,16,17,18,Pau?nitz
-
-# 13
-dat13VKI = dat[dat$PlotID==13 & dat$Species=="VKI",] # 191 trees
-hist(dat13VKI$DBH_mm, breaks=20, xlim=c(0,250))
-mean(dat13VKI$DBH_mm)
-sd(dat13VKI$DBH_mm)
-
-est13 = optim(par=c(mean(dat13VKI$DBH_mm),sd(dat13VKI$DBH_mm)),
-        fn=neg.log.lik,
-        x=dat13VKI$DBH_mm)
-
-#hist(rnorm(1000, mean=93.09912, sd=47.99647))
-obs = 1-pnorm(50, mean=93.42991, sd=47.56225)
-total13 = 191/obs # 233
-233.1*10000/782
-
-
-# 14
-dat14VKI = dat[dat$PlotID==14 & dat$Species=="VKI",] # 55 trees, many other tree species (44)
-hist(dat14VKI$DBH_mm, breaks=20, xlim=c(0,400))
-mean(dat14VKI$DBH_mm)
-sd(dat14VKI$DBH_mm)
-
-est14 = optim(par=c(mean(dat14VKI$DBH_mm),sd(dat14VKI$DBH_mm)),
-              fn=neg.log.lik,
-              x=dat14VKI$DBH_mm)
-
-#hist(rnorm(1000, mean=93.09912, sd=47.99647))
-obs = 1-pnorm(50, mean=223.15774, sd=74.09876)
-total14 = 55/obs # 55.5
-55.54*10000/800 # 694
-
+# 15,16,17,18,Pausnitz
 
 #15
 dat15SEI = dat[dat$PlotID==15 & dat$Species=="SEI",] # 83
@@ -126,25 +94,7 @@ obs = 1-pnorm(50, mean=133.83022, sd=56.97596)
 total18 = 47/obs # 50.57
 50.57*10000/600 # 843
 
-
-#10
-dat10 = dat[dat$PlotID==10 & dat$Species=="BAH",] # 77
-hist(dat10$DBH_mm, breaks=20, xlim=c(0,400))
-mean(dat10$DBH_mm)
-sd(dat10$DBH_mm)
-
-est10 = optim(par=c(mean(dat10$DBH_mm),sd(dat10$DBH_mm)),
-              fn=neg.log.lik,
-              x=dat10$DBH_mm)
-
-#hist(rnorm(1000, mean=93.09912, sd=47.99647))
-obs = 1-pnorm(50, mean=114.10889, sd=56.62518)
-total10 = 77/obs # 50.57
-88.4*10000/600 # 1473
-
-
-
-#Pau?nitz
+#Pausnitz
 datPSEI = dat[dat$PlotID=="Pau?nitz" & dat$Species=="SEI",] # 91
 hist(datPSEI$DBH_mm, breaks=20, xlim=c(0,400))
 mean(datPSEI$DBH_mm)
@@ -157,5 +107,5 @@ estP = optim(par=c(mean(datPSEI$DBH_mm),sd(datPSEI$DBH_mm)),
 #hist(rnorm(1000, mean=93.09912, sd=47.99647))
 obs = 1-pnorm(50, mean=62.07663, sd=31.42542)
 totalP = 91/obs # 140
-140*10000/400 # 843
+140*10000/400 # 3500
 
