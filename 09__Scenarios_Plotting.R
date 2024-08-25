@@ -13,7 +13,7 @@ options(scipen=999)
 
 ## min
 ## min oak 40cm model output
-min_oaks_2013_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Min/all_cohorts_out_40.csv") %>%
+min_oaks_2013_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -45,7 +45,7 @@ min_oak_2013_dry_40_canopy_percentage$cum_avg_percentage <- cummean(min_oak_2013
 
 ## mean
 ## mean oak 30cm model output
-mean_oaks_2013_dry_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_2013_dry_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -76,7 +76,7 @@ mean_oak_2013_dry_30_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_20
 
 
 ## mean oak 40cm model output
-mean_oaks_2013_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_2013_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -107,7 +107,7 @@ mean_oak_2013_dry_40_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_20
 
 
 ## mean oak 50cm model output
-mean_oaks_2013_dry_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/mean/all_cohorts_out_50.csv") %>%
+mean_oaks_2013_dry_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -139,7 +139,7 @@ mean_oak_2013_dry_50_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_20
 
 ## max
 ## max oak 40cm model output
-max_oaks_2013_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Max/all_cohorts_out_40.csv") %>%
+max_oaks_2013_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Dry/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -173,7 +173,7 @@ max_oak_2013_dry_40_canopy_percentage$cum_avg_percentage <- cummean(max_oak_2013
 
 ## min
 ## min oak 40cm moodel output
-min_oaks_2013_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Min/all_cohorts_out_40.csv") %>%
+min_oaks_2013_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -205,7 +205,7 @@ min_oak_2013_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean(min
 
 ## mean
 ## mean oak 30cm model output
-mean_oaks_2013_intermediate_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_2013_intermediate_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -236,7 +236,7 @@ mean_oak_2013_intermediate_30_canopy_percentage$cum_avg_percentage <- cummean(me
 
 
 # mean oak 40cm model output
-mean_oaks_2013_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_2013_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -267,7 +267,7 @@ mean_oak_2013_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean(me
 
 
 # mean oak 50cm model output
-mean_oaks_2013_intermediate_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Mean/all_cohorts_out_50.csv") %>%
+mean_oaks_2013_intermediate_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/Mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -299,7 +299,7 @@ mean_oak_2013_intermediate_50_canopy_percentage$cum_avg_percentage <- cummean(me
 
 ## max
 ## max oak 40 cm model output
-max_oaks_2013_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/max/all_cohorts_out_40.csv") %>%
+max_oaks_2013_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/intermediate/max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -333,7 +333,7 @@ max_oak_2013_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean(max
 # plotting
 all_2013_intermediate_min_mean_max_oak_canopy_percentage <- min_oak_2013_intermediate_40_canopy_percentage %>% full_join(mean_oak_2013_intermediate_40_canopy_percentage) %>% full_join(max_oak_2013_intermediate_40_canopy_percentage)
 
-#write.csv(all_2013_intermediate_min_mean_max_oak_canopy_percentage, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/2013_min_mean_max_oak_canopy_percentage.csv")
+#write.csv(all_2013_intermediate_min_mean_max_oak_canopy_percentage, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/2013_min_mean_max_oak_canopy_percentage.csv")
 
 plot_2013_oak_femel_rates <- all_2013_intermediate_min_mean_max_oak_canopy_percentage %>%
   ggplot() +
@@ -370,7 +370,7 @@ plot_2013_oak_femel_rates <- all_2013_intermediate_min_mean_max_oak_canopy_perce
 
 all_2013_intermediate_30_40_50_oak_canopy_percentage <- mean_oak_2013_intermediate_30_canopy_percentage %>% full_join(mean_oak_2013_intermediate_40_canopy_percentage) %>% full_join(mean_oak_2013_intermediate_50_canopy_percentage)
 
-#write.csv(all_2013_intermediate_30_40_50_oak_canopy_percentage, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/2013_30_40_50_oak_canopy_percentage.csv")
+#write.csv(all_2013_intermediate_30_40_50_oak_canopy_percentage, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/2013_30_40_50_oak_canopy_percentage.csv")
 
 plot_2013_ambient_DBH <- all_2013_intermediate_30_40_50_oak_canopy_percentage %>%
   ggplot() +
@@ -410,7 +410,7 @@ plot_2013_ambient_DBH <- all_2013_intermediate_30_40_50_oak_canopy_percentage %>
 
 ## max
 ## max oak 40cm model output
-max_oaks_2013_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/Max/all_cohorts_out_40.csv") %>%
+max_oaks_2013_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -442,7 +442,7 @@ max_oak_2013_moist_40_canopy_percentage$cum_avg_percentage <- cummean(max_oak_20
 
 ## mean
 ## mean oak 30cm model output
-mean_oaks_2013_moist_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/moist/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_2013_moist_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/moist/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -473,7 +473,7 @@ mean_oak_2013_moist_30_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_
 
 
 ## mean oak 40cm model output
-mean_oaks_2013_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_2013_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -504,7 +504,7 @@ mean_oak_2013_moist_40_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_
 
 
 ## mean oak 50cm model output
-mean_oaks_2013_moist_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/mean/all_cohorts_out_50.csv") %>%
+mean_oaks_2013_moist_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -536,7 +536,7 @@ mean_oak_2013_moist_50_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_
 
 ## min
 ## min oak 40cm model output
-min_oaks_2013_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/Min/all_cohorts_out_40.csv") %>%
+min_oaks_2013_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2013 Rates/Moist/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          # sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -570,7 +570,7 @@ min_oak_2013_moist_40_canopy_percentage$cum_avg_percentage <- cummean(min_oak_20
 
 all_GW_mean_oak_canopy_percentage_2013 <- mean_oak_2013_dry_40_canopy_percentage %>% full_join(mean_oak_2013_intermediate_40_canopy_percentage) %>% full_join(mean_oak_2013_moist_40_canopy_percentage)
 
-#write.csv(all_GW_mean_oak_canopy_percentage_2013, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/2013_GW_classes_oak_canopy_percentage.csv")
+#write.csv(all_GW_mean_oak_canopy_percentage_2013, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/2013_GW_classes_oak_canopy_percentage.csv")
 
 plot_2013_all_GW <- all_GW_mean_oak_canopy_percentage_2013 %>% 
   ggplot() + 
@@ -610,7 +610,7 @@ plot_2013_all_GW <- all_GW_mean_oak_canopy_percentage_2013 %>%
 
 ## min
 ## min oak 40cm model output
-min_oaks_2016_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Min/all_cohorts_out_40.csv") %>%
+min_oaks_2016_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -642,7 +642,7 @@ min_oak_2016_dry_40_canopy_percentage$cum_avg_percentage <- cummean(min_oak_2016
 
 ## mean
 ## mean oak 30cm model output
-mean_oaks_2016_dry_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_2016_dry_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -674,7 +674,7 @@ mean_oak_2016_dry_30_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_20
 
 # mean oak 40cm model output
 
-mean_oaks_2016_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_2016_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -706,7 +706,7 @@ mean_oak_2016_dry_40_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_20
 
 ## mean oak 50cm model output
 
-mean_oaks_2016_dry_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/mean/all_cohorts_out_50.csv") %>%
+mean_oaks_2016_dry_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -739,7 +739,7 @@ mean_oak_2016_dry_50_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_20
 ## max
 ## max oak 40cm model output
 
-max_oaks_2016_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Max/all_cohorts_out_40.csv") %>%
+max_oaks_2016_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Dry/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -773,7 +773,7 @@ max_oak_2016_dry_40_canopy_percentage$cum_avg_percentage <- cummean(max_oak_2016
 
 ## min
 ## min oak 40cm model output
-min_oaks_2016_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Min/all_cohorts_out_40.csv") %>%
+min_oaks_2016_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -805,7 +805,7 @@ min_oak_2016_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean(min
 
 # mean
 # mean oak 30cm model output
-mean_oaks_2016_intermediate_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_2016_intermediate_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -836,7 +836,7 @@ mean_oak_2016_intermediate_30_canopy_percentage$cum_avg_percentage <- cummean(me
 
 
 ## mean oak 40cm model output
-mean_oaks_2016_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_2016_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -867,7 +867,7 @@ mean_oak_2016_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean(me
 
 
 ## mean oak 50cm model output
-mean_oaks_2016_intermediate_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Mean/all_cohorts_out_50.csv") %>%
+mean_oaks_2016_intermediate_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -898,7 +898,7 @@ mean_oak_2016_intermediate_50_canopy_percentage$cum_avg_percentage <- cummean(me
 
 # max
 # max oak 40cm model output
-max_oaks_2016_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Max/all_cohorts_out_40.csv") %>%
+max_oaks_2016_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/intermediate/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -932,7 +932,7 @@ max_oak_2016_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean(max
 
 all_2016_intermediate_min_mean_max_oak_canopy_percentage <- min_oak_2016_intermediate_40_canopy_percentage %>% full_join(mean_oak_2016_intermediate_40_canopy_percentage) %>% full_join(max_oak_2016_intermediate_40_canopy_percentage) %>% filter(time <= 651)
 
-#write.csv(all_2016_intermediate_min_mean_max_oak_canopy_percentage, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/2016_min_mean_max_oak_canopy_percentage.csv")
+#write.csv(all_2016_intermediate_min_mean_max_oak_canopy_percentage, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/2016_min_mean_max_oak_canopy_percentage.csv")
 
 plot_2016_oak_femel_rates <- all_2016_intermediate_min_mean_max_oak_canopy_percentage %>%
   ggplot() +
@@ -970,7 +970,7 @@ plot_2016_oak_femel_rates <- all_2016_intermediate_min_mean_max_oak_canopy_perce
 
 all_2016_intermediate_30_40_50_oak_canopy_percentage <- mean_oak_2016_intermediate_30_canopy_percentage %>% full_join(mean_oak_2016_intermediate_40_canopy_percentage) %>% full_join(mean_oak_2016_intermediate_50_canopy_percentage) %>% filter(time <= 651)
 
-#write.csv(all_2016_intermediate_30_40_50_oak_canopy_percentage, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/2016_30_40_50_oak_canopy_percentage.csv")
+#write.csv(all_2016_intermediate_30_40_50_oak_canopy_percentage, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/2016_30_40_50_oak_canopy_percentage.csv")
 
 plot_2016_ambient_DBH <- all_2016_intermediate_30_40_50_oak_canopy_percentage %>%
   ggplot() +
@@ -1012,7 +1012,7 @@ plot_2016_ambient_DBH <- all_2016_intermediate_30_40_50_oak_canopy_percentage %>
 ## min
 ## min oak 40cm model output
 
-min_oaks_2016_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Min/all_cohorts_out_40.csv") %>%
+min_oaks_2016_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1045,7 +1045,7 @@ min_oak_2016_moist_40_canopy_percentage$cum_avg_percentage <- cummean(min_oak_20
 ## mean
 ## mean oak 30cm model output
 
-mean_oaks_2016_moist_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/moist/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_2016_moist_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/moist/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1077,7 +1077,7 @@ mean_oak_2016_moist_30_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_
 
 # mean oak 40cm model output
 
-mean_oaks_2016_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_2016_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1109,7 +1109,7 @@ mean_oak_2016_moist_40_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_
 
 # mean oak 50cm model output
 
-mean_oaks_2016_moist_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Mean/all_cohorts_out_50.csv") %>%
+mean_oaks_2016_moist_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1142,7 +1142,7 @@ mean_oak_2016_moist_50_canopy_percentage$cum_avg_percentage <- cummean(mean_oak_
 ## max
 ## max oak 40cm model output
 
-max_oaks_2016_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Max/all_cohorts_out_40.csv") %>%
+max_oaks_2016_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/2016 Rates/Moist/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1176,7 +1176,7 @@ max_oak_2016_moist_40_canopy_percentage$cum_avg_percentage <- cummean(max_oak_20
 
 all_GW_mean_40_oak_canopy_percentage_2016 <- mean_oak_2016_dry_40_canopy_percentage %>% full_join(mean_oak_2016_intermediate_40_canopy_percentage) %>% full_join(mean_oak_2016_moist_40_canopy_percentage)
 
-#write.csv(all_GW_mean_40_oak_canopy_percentage_2016, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/2016_GW_classes_oak_canopy_percentage.csv")
+#write.csv(all_GW_mean_40_oak_canopy_percentage_2016, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/2016_GW_classes_oak_canopy_percentage.csv")
 
 plot_2016_all_GW <- all_GW_mean_40_oak_canopy_percentage_2016 %>% 
   ggplot() + 
@@ -1217,7 +1217,7 @@ plot_2016_all_GW <- all_GW_mean_40_oak_canopy_percentage_2016 %>%
 
 ## min
 ## min oak 40cm model output
-min_oaks_combined_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Min/all_cohorts_out_40.csv") %>%
+min_oaks_combined_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1249,7 +1249,7 @@ min_oak_combined_dry_40_canopy_percentage$cum_avg_percentage <- cummean(min_oak_
 
 ## mean
 ## mean oak 30cm model output
-mean_oaks_combined_dry_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_combined_dry_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1280,7 +1280,7 @@ mean_oak_combined_dry_30_canopy_percentage$cum_avg_percentage <- cummean(mean_oa
 
 
 ## mean oak 40cm model output
-mean_oaks_combined_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Mean/all_cohorts_out_40.csv") %>%
+mean_oaks_combined_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Mean/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1311,7 +1311,7 @@ mean_oak_combined_dry_40_canopy_percentage$cum_avg_percentage <- cummean(mean_oa
 
 
 ## mean oak 50cm model output
-mean_oaks_combined_dry_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Mean/all_cohorts_out_50.csv") %>%
+mean_oaks_combined_dry_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1343,7 +1343,7 @@ mean_oak_combined_dry_50_canopy_percentage$cum_avg_percentage <- cummean(mean_oa
 
 ## max
 ## max oak 40cm model output
-max_oaks_combined_dry_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Max/all_cohorts_out_40.csv") %>%
+max_oaks_combined_dry_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Dry/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1378,7 +1378,7 @@ max_oak_combined_dry_40_canopy_percentage$cum_avg_percentage <- cummean(max_oak_
 
 # min
 # min oak 40cm model output
-min_oaks_combined_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/min/all_cohorts_out_40.csv") %>%
+min_oaks_combined_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1410,7 +1410,7 @@ min_oak_combined_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean
 
 # mean
 # mean oak 30cm model output
-mean_oaks_combined_intermediate_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_combined_intermediate_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1441,7 +1441,7 @@ mean_oak_combined_intermediate_30_canopy_percentage$cum_avg_percentage <- cummea
 
 
 ## mean oak 40cm model output
-mean_oaks_combined_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/Mean/all_cohorts_out_40.csv") %>% 
+mean_oaks_combined_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/Mean/all_cohorts_out_40.csv") %>% 
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1472,7 +1472,7 @@ mean_oak_combined_intermediate_40_canopy_percentage$cum_avg_percentage <- cummea
 
 
 ## mean oak 50cm model output
-mean_oaks_combined_intermediate_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/Mean/all_cohorts_out_50.csv") %>%
+mean_oaks_combined_intermediate_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/Mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1504,7 +1504,7 @@ mean_oak_combined_intermediate_50_canopy_percentage$cum_avg_percentage <- cummea
 
 ## max
 ## max oak 40cm model output
-max_oaks_combined_intermediate_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/max/all_cohorts_out_40.csv") %>%
+max_oaks_combined_intermediate_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/intermediate/max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1538,7 +1538,7 @@ max_oak_combined_intermediate_40_canopy_percentage$cum_avg_percentage <- cummean
 
 all_combined_intermediate_min_mean_max_oak_canopy_percentage <- min_oak_combined_intermediate_40_canopy_percentage %>% full_join(mean_oak_combined_intermediate_40_canopy_percentage) %>% full_join(max_oak_combined_intermediate_40_canopy_percentage)
 
-#write.csv(all_combined_intermediate_min_mean_max_oak_canopy_percentage, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/combined_min_mean_max_oak_canopy_percentage.csv")
+#write.csv(all_combined_intermediate_min_mean_max_oak_canopy_percentage, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/combined_min_mean_max_oak_canopy_percentage.csv")
 
 plot_combined_oak_femel_rates <- all_combined_intermediate_min_mean_max_oak_canopy_percentage %>% filter(time < 400) %>% 
   ggplot() +
@@ -1577,7 +1577,7 @@ plot_combined_oak_femel_rates <- all_combined_intermediate_min_mean_max_oak_cano
 
 all_combined_intermediate_30_40_50_oak_canopy_percentage <- mean_oak_combined_intermediate_30_canopy_percentage %>% full_join(mean_oak_combined_intermediate_40_canopy_percentage) %>% full_join(mean_oak_combined_intermediate_50_canopy_percentage)
 
-#write.csv(all_combined_intermediate_30_40_50_oak_canopy_percentage, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/combined_30_40_50_oak_canopy_percentage.csv")
+#write.csv(all_combined_intermediate_30_40_50_oak_canopy_percentage, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/combined_30_40_50_oak_canopy_percentage.csv")
 
 plot_combined_ambient_DBH <- all_combined_intermediate_30_40_50_oak_canopy_percentage %>% filter(time < 400) %>% 
   ggplot() +
@@ -1619,7 +1619,7 @@ plot_combined_ambient_DBH <- all_combined_intermediate_30_40_50_oak_canopy_perce
 ## min
 ## min oak 40cm model output
 
-min_oaks_combined_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/Min/all_cohorts_out_40.csv") %>%
+min_oaks_combined_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/Min/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1651,7 +1651,7 @@ min_oak_combined_moist_40_canopy_percentage$cum_avg_percentage <- cummean(min_oa
 
 ## mean
 ## mean oak 30cm model output
-mean_oaks_combined_moist_30_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/moist/Mean/all_cohorts_out_30.csv") %>%
+mean_oaks_combined_moist_30_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/moist/Mean/all_cohorts_out_30.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1682,7 +1682,7 @@ mean_oak_combined_moist_30_canopy_percentage$cum_avg_percentage <- cummean(mean_
 
 
 ## mean oak 40cm model output
-mean_oaks_combined_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/Mean/all_cohorts_out_40.csv") %>% 
+mean_oaks_combined_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/Mean/all_cohorts_out_40.csv") %>% 
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1713,7 +1713,7 @@ mean_oak_combined_moist_40_canopy_percentage$cum_avg_percentage <- cummean(mean_
 
 
 ## mean oak 50cm model output
-mean_oaks_combined_moist_50_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/mean/all_cohorts_out_50.csv") %>%
+mean_oaks_combined_moist_50_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/mean/all_cohorts_out_50.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1745,7 +1745,7 @@ mean_oak_combined_moist_50_canopy_percentage$cum_avg_percentage <- cummean(mean_
 
 ## max
 ## max oak 40cm model output
-max_oaks_combined_moist_40_output <- read.csv("C:/Users/idivjb92jaka/Documents/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/Max/all_cohorts_out_40.csv") %>%
+max_oaks_combined_moist_40_output <- read.csv("[Local File Path]/Auenwald_Thesis/Model Initializations/Sachsenforst 2023 Oak Femels/Combined Rates/Moist/Max/all_cohorts_out_40.csv") %>%
   mutate(sp_name = case_when(as.character(sp) %in% "1" ~ "BAH",
                              TRUE ~ as.character(sp)),
          sp_name = case_when(as.character(sp) %in% "2" ~ "FAH",
@@ -1779,7 +1779,7 @@ max_oak_combined_moist_40_canopy_percentage$cum_avg_percentage <- cummean(max_oa
 
 all_mean_oak_canopy_percentage_combined <- mean_oak_combined_dry_40_canopy_percentage %>% full_join(mean_oak_combined_intermediate_40_canopy_percentage) %>% full_join(mean_oak_combined_moist_40_canopy_percentage) %>% filter(time <= 400)
 
-#write.csv(all_mean_oak_canopy_percentage_combined, "C:/Users/idivjb92jaka/Documents/Thesis Data/Data Frames for Plotted Outputs/combined_GW_classes_oak_canopy_percentage.csv")
+#write.csv(all_mean_oak_canopy_percentage_combined, "[Local File Path]/Thesis Data/Data Frames for Plotted Outputs/combined_GW_classes_oak_canopy_percentage.csv")
 
 # single femel cover
 
