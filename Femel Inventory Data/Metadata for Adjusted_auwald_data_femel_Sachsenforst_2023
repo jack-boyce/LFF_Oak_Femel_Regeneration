@@ -1,6 +1,6 @@
 ## This file includes the metadata for the 2023 inventory of the oak femels. Note that the data in the second tab "Adjusted_data" was used for the analysis. The adjusted data simply includes the reclassification of some oak trees and condenses the raw data to only include plots where oak femels were planted. 
 
-## PlotID: the identifier for each of the plots according to Sachsenforst. The Paußnitz plot is the smallest femel located in the southern part of the forest (separate from the other four plots)
+## PlotID: the identifier for each of the plots according to Sachsenforst. The "P" plot is the smallest femel (Paußnitz) located in the southern part of the forest (separate from the other four plots)
 
 ## TreeID: the identifier for each unique tree that was measured. TreeID's start over from 1 for each of the PlotID's.
 
