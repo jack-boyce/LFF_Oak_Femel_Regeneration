@@ -3,6 +3,7 @@
 
 library("ExtDist")
 library("truncdist")
+library("openxlsx")
 
 set.seed(123)
 
@@ -25,7 +26,7 @@ optim(par=c(mean(X),sd(X)),
 
 
 # all strange oaks are considered to be SEI
-dat = read.table("auwald_data_femel_Sachsenforst_2023.txt", header=T)
+dat = read.xlsx("Inventory_Data_2023.xlsx")
 unique(dat$PlotID)
 
 # 15,16,17,18,Pausnitz
@@ -47,7 +48,7 @@ total15 = 83/obs # 88.1
 
 
 #16
-dat = read.table("Adjusted_auwald_data_femel_Sachsenforst_2023_mod.txt", header=T)
+dat = read.xlsx("Inventory_Data_2023.xlsx")
 dat16SEI = dat[dat$PlotID==16 & dat$Species=="SEI",] # 54
 hist(dat16SEI$DBH_mm, breaks=20, xlim=c(0,400))
 mean(dat16SEI$DBH_mm)
