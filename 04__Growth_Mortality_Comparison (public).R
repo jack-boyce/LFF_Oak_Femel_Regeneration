@@ -11,7 +11,7 @@ library(cowplot)
 ######## Loading in data -----------------------------------------------
 
 # 2010 femel inventory data
-i_2010_Data <- read.xlsx("[insert file path]") %>% mutate(PlotID = Feld, Species = Baumart, DBH = Durchmesser)%>% select(-Bemerkung, -Feld, -Baumart, -Durchmesser)
+i_2010_Data <- read.xlsx("[insert file path to Inventory_Data_2010.xlsx in Femel Inventory Data]") %>% mutate(PlotID = Feld, Species = Baumart, DBH = Durchmesser)%>% select(-Bemerkung, -Feld, -Baumart, -Durchmesser)
 
 i_2010_15 <- i_2010_Data %>% filter(PlotID == "15") %>% filter(Species == "SEI")
 i_2010_16 <- i_2010_Data %>% filter(PlotID == "16") %>% filter(Species == "SEI")
@@ -32,7 +32,7 @@ i_2010_summary <- i_2010_grouped_1 %>% left_join(i_2010_grouped_2) %>% mutate(`N
 
 
 # 2023 femel inventory data
-i_2023_Data <- read.xlsx("[insert file path to Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
+i_2023_Data <- read.xlsx("[insert file path to Inventory_Data_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
   mutate(DBH = DBH_mm/10) %>% select(-c(DBH_mm, Comments, TreeID, StemID)) %>% relocate(DBH, .after = Species)
 
 i_2023_15 <- Fieldwork_Census %>% filter(PlotID == "15") %>% filter(Species_Adjusted == "SEI")
