@@ -11,8 +11,8 @@ library(patchwork)
 library(cowplot)
 
 # Loading in data
-i_2010_Data <- read.xlsx("[insert file path to ]")
-i_2023_Data <- read.xlsx("[insert file path to Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
+i_2010_Data <- read.xlsx("[insert file path to Inventory_Data_2010.xlsx in Femel Inventory Data]")
+i_2023_Data <- read.xlsx("[insert file path to Inventory_Data_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
   mutate(DBH = DBH_mm/10) %>% select(-c(DBH_mm, Shaded, TreeID, StemID)) %>% relocate(DBH, .after = Species)
 
 ## average dbh
