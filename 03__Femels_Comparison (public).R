@@ -1,7 +1,7 @@
 
 ## Author: Jack Boyce
 
-## Comparison of Gregor Janus data from 2010 with April fieldwork data in Sachsenforst managed plots
+## Comparison of inventory data from 2010 with inventory data from 2023 in Sachsenforst managed femels
 
 # Loading packages
 library(tidyverse)
@@ -11,19 +11,19 @@ library(patchwork)
 library(cowplot)
 
 # Loading in data
-GJ_Data <- read.xlsx("[insert file path]")
-Fieldwork_Data <- read.xlsx("[insert file path]", sheet = 2) %>% 
+i_2010_Data <- read.xlsx("[insert file path to ]")
+i_2023_Data <- read.xlsx("[insert file path to Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
   mutate(DBH = DBH_mm/10) %>% select(-c(DBH_mm, Shaded, TreeID, StemID)) %>% relocate(DBH, .after = Species)
 
 ## average dbh
-average_oak_dbh_2010 <- GJ_Data %>% filter(Baumart == "SEI") %>% mutate(average_dbh = mean(Durchmesser)) %>% select(average_dbh) %>% distinct()
-average_oak_dbh_2023 <- Fieldwork_Data %>% filter(Species_Adjusted == "SEI") %>% mutate(average_dbh = mean(DBH)) %>% select(average_dbh) %>% distinct()
+average_oak_dbh_2010 <- i_2010_Data %>% filter(Baumart == "SEI") %>% mutate(average_dbh = mean(Durchmesser)) %>% select(average_dbh) %>% distinct()
+average_oak_dbh_2023 <- i_2023_Data %>% filter(Species_Adjusted == "SEI") %>% mutate(average_dbh = mean(DBH)) %>% select(average_dbh) %>% distinct()
 
 
-## Wrangling for abundance per size class per hectare
+## Wrangling for abundance per size class per hectare in each femel
 
-# Gregor Janus data from 2010
-GJ_15 <- GJ_Data %>% mutate(
+# Inventory data from 2010
+i_2010_15 <- i_2010_Data %>% mutate(
   `Data Set` = "2010",
   PlotID = Feld,
   Species = Baumart,
@@ -38,7 +38,7 @@ GJ_15 <- GJ_Data %>% mutate(
   count() %>% 
   mutate(`Abundance per Hectare` = n*22.22)  # Plot size = 450; 10000/450 = 22.22
 
-GJ_16 <- GJ_Data %>% mutate(
+i_2010_16 <- i_2010_Data %>% mutate(
   `Data Set` = "2010",
   PlotID = Feld,
   Species = Baumart,
@@ -53,7 +53,7 @@ GJ_16 <- GJ_Data %>% mutate(
   count() %>% 
   mutate(`Abundance per Hectare` = n*18.18)  # Plot size = 550; 10000/550 = 18.18
 
-GJ_17 <- GJ_Data %>% mutate(
+i_2010_17 <- i_2010_Data %>% mutate(
   `Data Set` = "2010",
   PlotID = Feld,
   Species = Baumart,
@@ -68,7 +68,7 @@ GJ_17 <- GJ_Data %>% mutate(
   count() %>% 
   mutate(`Abundance per Hectare` = n*15.38)  # Plot size = 650; 10000/650 = 15.38
 
-GJ_18 <- GJ_Data %>% mutate(
+i_2010_18 <- i_2010_Data %>% mutate(
   `Data Set` = "2010",
   PlotID = Feld,
   Species = Baumart,
@@ -84,9 +84,9 @@ GJ_18 <- GJ_Data %>% mutate(
   mutate(`Abundance per Hectare` = n*25)  # Plot size = 400; 10000/400 = 25
 
 
-## Fieldwork data from 2023
+## Inventory data from 2023
 
-FW_15 <- Fieldwork_Data %>% mutate(
+i_2023_15 <- i_2023_Data %>% mutate(
   `Data Set` = "2023",
   `Size Class` = DBH %/% 1,
 ) %>% 
@@ -98,7 +98,7 @@ FW_15 <- Fieldwork_Data %>% mutate(
   mutate(`Abundance per Hectare` = n*11.11) %>%  # Plot size = 900; 10000/900 = 11.11
   rename(Species = Species_Adjusted)
 
-FW_16 <- Fieldwork_Data %>% mutate(
+i_2023_16 <- i_2023_Data %>% mutate(
   `Data Set` = "2023",
   `Size Class` = DBH %/% 1,
 ) %>% 
@@ -110,7 +110,7 @@ FW_16 <- Fieldwork_Data %>% mutate(
   mutate(`Abundance per Hectare` = n*14.81) %>%  # Plot size = 675; 10000/675 = 14.81 (b/c Q3 removed)
   rename(Species = Species_Adjusted)
 
-FW_17 <- Fieldwork_Data %>% mutate(
+i_2023_17 <- i_2023_Data %>% mutate(
   `Data Set` = "2023",
   `Size Class` = DBH %/% 1,
 ) %>%
@@ -123,7 +123,7 @@ FW_17 <- Fieldwork_Data %>% mutate(
   mutate(`Abundance per Hectare` = n*44.44) %>%  # Plot size = 225; 10000/225 = 44.44 (b/c only including Q1)
   rename(Species = Species_Adjusted)
 
-FW_18 <- Fieldwork_Data %>% mutate(
+i_2023_18 <- i_2023_Data %>% mutate(
   `Data Set` = "2023",
   `Size Class` = DBH %/% 1,
 ) %>% 
@@ -135,7 +135,7 @@ FW_18 <- Fieldwork_Data %>% mutate(
   mutate(`Abundance per Hectare` = n*16.67) %>%  # Plot size = 600; 10000/600 = 16.67
   rename(Species = Species_Adjusted)
 
-FW_P <- Fieldwork_Data %>% mutate(
+i_2023_P <- i_2023_Data %>% mutate(
   `Data Set` = "2023",
   `Size Class` = DBH %/% 1,
 ) %>% 
@@ -148,11 +148,11 @@ FW_P <- Fieldwork_Data %>% mutate(
   rename(Species = Species_Adjusted)
 
 ## combining data
-Plot_15 <- rbind(GJ_15, FW_15) %>% mutate(Plot = "15") %>% relocate(Plot, .before = `Data Set`)
-Plot_16 <- rbind(GJ_16, FW_16) %>% mutate(Plot = "16") %>% relocate(Plot, .before = `Data Set`)
-Plot_17 <- rbind(GJ_17, FW_17) %>% mutate(Plot = "17") %>% relocate(Plot, .before = `Data Set`)
-Plot_18 <- rbind(GJ_18, FW_18) %>% mutate(Plot = "18") %>% relocate(Plot, .before = `Data Set`)
-Plot_P <- FW_P %>% mutate(Plot = "P") %>% relocate(Plot, .before = `Data Set`)
+Plot_15 <- rbind(i_2010_15, i_2023_15) %>% mutate(Plot = "15") %>% relocate(Plot, .before = `Data Set`)
+Plot_16 <- rbind(i_2010_16, i_2023_16) %>% mutate(Plot = "16") %>% relocate(Plot, .before = `Data Set`)
+Plot_17 <- rbind(i_2010_17, i_2023_17) %>% mutate(Plot = "17") %>% relocate(Plot, .before = `Data Set`)
+Plot_18 <- rbind(i_2010_18, i_2023_18) %>% mutate(Plot = "18") %>% relocate(Plot, .before = `Data Set`)
+Plot_P <- i_2023_P %>% mutate(Plot = "P") %>% relocate(Plot, .before = `Data Set`)
 
 All_SEI_plots <- rbind(Plot_15, Plot_16, Plot_17, Plot_18, Plot_P)
 
