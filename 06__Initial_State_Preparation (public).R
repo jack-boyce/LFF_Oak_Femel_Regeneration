@@ -1,7 +1,7 @@
 
 ## Author: Jack Boyce
 
-## preparing initial state files for Sachsenforst plots (2023)
+## preparing initial state files for Sachsenforst femel plots (2023)
 ##
 ## source code for following initial states included:
 ##
@@ -19,7 +19,7 @@ library(openxlsx)
 
 ### Loading in data
 
-Sachsenforst_Data <- read.xlsx("[insert file path]", sheet = 2) %>% 
+i_2023_Data <- read.xlsx("[insert file path to Inventory_Data_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
   mutate(DBH = DBH_mm/10) %>% select(-c(DBH_mm, Shaded, TreeID, StemID, Species)) %>% rename(Species = Species_Adjusted) %>% relocate(DBH, .after = Species)
 
 
