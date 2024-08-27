@@ -1,6 +1,6 @@
 ## This file includes the metadata for the 2010 inventory of the oak femels.
 
-## Feld: the PlotID (corresponds to the same PlotIDs as found in the 2023 inventory data (Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx))
+## Feld: the PlotID (corresponds to the same PlotIDs as found in the 2023 inventory data (Inventory_Data_2023.xlsx))
 ##       The measured areas of each plot are provided in the second tab "Plot Areas"
 
 ## Baumart: the identifier for each type of observed tree species. The observed species codes are as follows:
