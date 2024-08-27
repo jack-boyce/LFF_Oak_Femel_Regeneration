@@ -1,0 +1,19 @@
+## This file includes the metadata for the 2010 inventory of the oak femels.
+
+## Feld: the PlotID (corresponds to the same PlotIDs as found in the 2023 inventory data (Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx))
+##       The measured areas of each plot are provided in the second tab "Plot Areas"
+
+## Baumart: the identifier for each type of observed tree species. The observed species codes are as follows:
+###  - SEI: Pedunculate oak / Quercus robur
+###  - WLI: Small-leaved lime / Tilia cordata
+###  - GES: Ash / Fraxinus excelsior
+###  - UL: Elm / Ulmus
+###  - HBU: European hornbeam / Carpinus betulus
+###  - BAH: Sycamore maple / Acer pseudoplatanus
+###  - SAH: Norway maple / Acer platanoides
+###  - FAH: Field maple / Acer campestre
+###  - VKI: Wild cherry / Prunus avium
+
+## Durchmesser: the diameter-at-breast-height (DBH) in centimeters for each observed tree
+
+## Bemerkung: any comments (in German) about each observed tree
