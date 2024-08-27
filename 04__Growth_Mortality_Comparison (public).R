@@ -10,65 +10,66 @@ library(cowplot)
 
 ######## Loading in data -----------------------------------------------
 
-# 2010 femels data
-GJ_Census <- read.xlsx("[insert file path]") %>% mutate(PlotID = Feld, Species = Baumart, DBH = Durchmesser)%>% select(-Bemerkung, -Feld, -Baumart, -Durchmesser)
+# 2010 femel inventory data
+i_2010_Data <- read.xlsx("[insert file path]") %>% mutate(PlotID = Feld, Species = Baumart, DBH = Durchmesser)%>% select(-Bemerkung, -Feld, -Baumart, -Durchmesser)
 
-GJ_15 <- GJ_Census %>% filter(PlotID == "15") %>% filter(Species == "SEI")
-GJ_16 <- GJ_Census %>% filter(PlotID == "16") %>% filter(Species == "SEI")
-GJ_17 <- GJ_Census %>% filter(PlotID == "17") %>% filter(Species == "SEI")
-GJ_18 <- GJ_Census %>% filter(PlotID == "18") %>% filter(Species == "SEI")
+i_2010_15 <- i_2010_Data %>% filter(PlotID == "15") %>% filter(Species == "SEI")
+i_2010_16 <- i_2010_Data %>% filter(PlotID == "16") %>% filter(Species == "SEI")
+i_2010_17 <- i_2010_Data %>% filter(PlotID == "17") %>% filter(Species == "SEI")
+i_2010_18 <- i_2010_Data %>% filter(PlotID == "18") %>% filter(Species == "SEI")
 
 
-GJ_bound <- rbind(
-  GJ_15, GJ_16, GJ_17, GJ_18)
-GJ_bound$PlotID <- as.character(GJ_bound$PlotID)
+i_2010_Data_bound <- rbind(
+  i_2010_15, i_2010_16, i_2010_17, i_2010_18)
+i_2010_Data_bound$PlotID <- as.character(i_2010_Data_bound$PlotID)
 
-Janus_1 <- GJ_bound %>% group_by(PlotID, Species) %>% mutate(`Mean DBH 2010` = mean(DBH)) %>% ungroup() %>% 
+i_2010_grouped_1 <- i_2010_Data_bound %>% group_by(PlotID, Species) %>% mutate(`Mean DBH 2010` = mean(DBH)) %>% ungroup() %>% 
   group_by(PlotID, Species, `Mean DBH 2010`) %>% summarise() %>% ungroup()
-Janus_2 <- GJ_bound %>% group_by(PlotID, Species) %>% count() %>% ungroup()
+i_2010_grouped_2 <- GJ_bound %>% group_by(PlotID, Species) %>% count() %>% ungroup()
 
-GJ_summary <- Janus_1 %>% left_join(Janus_2) %>% mutate(`N 2010` = n) %>% select(-n)
+i_2010_summary <- i_2010_grouped_1 %>% left_join(i_2010_grouped_2) %>% mutate(`N 2010` = n) %>% select(-n)
 
 
 
-# 2023 femels data
-Fieldwork_Census <- read.xlsx("[insert file path]", sheet = 2) %>% 
+# 2023 femel inventory data
+i_2023_Data <- read.xlsx("[insert file path to Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx in Femel Inventory Data]", sheet = 2) %>% 
   mutate(DBH = DBH_mm/10) %>% select(-c(DBH_mm, Comments, TreeID, StemID)) %>% relocate(DBH, .after = Species)
 
-Fieldwork_15 <- Fieldwork_Census %>% filter(PlotID == "15") %>% filter(Species_Adjusted == "SEI")
-Fieldwork_16 <- Fieldwork_Census %>% filter(PlotID == "16") %>% filter(Species_Adjusted == "SEI")
-Fieldwork_17 <- Fieldwork_Census %>% filter(PlotID == "17") %>% filter(Species_Adjusted == "SEI")
-Fieldwork_18 <- Fieldwork_Census %>% filter(PlotID == "18") %>% filter(Species_Adjusted == "SEI")
+i_2023_15 <- Fieldwork_Census %>% filter(PlotID == "15") %>% filter(Species_Adjusted == "SEI")
+i_2023_16 <- Fieldwork_Census %>% filter(PlotID == "16") %>% filter(Species_Adjusted == "SEI")
+i_2023_17 <- Fieldwork_Census %>% filter(PlotID == "17") %>% filter(Species_Adjusted == "SEI")
+i_2023_18 <- Fieldwork_Census %>% filter(PlotID == "18") %>% filter(Species_Adjusted == "SEI")
 
-Fieldwork_bound <- rbind(
-  Fieldwork_15, Fieldwork_16, Fieldwork_17, Fieldwork_18)
+i_2023_Data_bound <- rbind(
+  i_2023_15, i_2023_16, i_2023_17, i_2023_18)
 
 
-Fieldwork_1 <- Fieldwork_bound %>% group_by(PlotID, Species_Adjusted, Shaded) %>% mutate(`Mean DBH 2023` = mean(DBH)) %>% ungroup() %>% 
+i_2023_grouped_1 <- i_2023_Data_bound %>% group_by(PlotID, Species_Adjusted, Shaded) %>% mutate(`Mean DBH 2023` = mean(DBH)) %>% ungroup() %>% 
   group_by(PlotID, Species_Adjusted, Shaded, `Mean DBH 2023`) %>% summarise() %>% ungroup()
-Fieldwork_2 <- Fieldwork_bound %>% group_by(PlotID, Species_Adjusted, Shaded) %>% count() %>% ungroup()
-Fieldwork_summary <- Fieldwork_1 %>% left_join(Fieldwork_2) %>% rename(`N 2023` = n)
-Fieldwork_summary$PlotID <- as.character(Fieldwork_summary$PlotID)
+i_2023_grouped_2 <- i_2023_Data_bound %>% group_by(PlotID, Species_Adjusted, Shaded) %>% count() %>% ungroup()
+
+i_2023_summary <- Fieldwork_1 %>% left_join(Fieldwork_2) %>% rename(`N 2023` = n)
+i_2023_summary$PlotID <- as.character(i_2023_summary$PlotID)
 
 
 # preparing Paußnitz data separately
-Fieldwork_Paußnitz <- Fieldwork_Census %>% 
+i_2023_Paußnitz <- i_2023_Data %>% 
   filter(PlotID == "P") %>% filter(Species_Adjusted == "SEI")
 
-P_summary <- Fieldwork_Paußnitz %>% group_by(PlotID, Species_Adjusted, Shaded) %>% mutate(`Mean DBH 2023` = mean(DBH)) %>% ungroup() %>% 
+i_2023_P_summary <- i_2023_Paußnitz %>% group_by(PlotID, Species_Adjusted, Shaded) %>% mutate(`Mean DBH 2023` = mean(DBH)) %>% ungroup() %>% 
   group_by(PlotID, Species_Adjusted, Shaded, `Mean DBH 2023`) %>% summarise() %>% ungroup() %>% mutate(`Mean DBH 2014` = 0) %>% mutate(`Planting_Year` = "2011") %>% rename(Species = `Species_Adjusted`) %>% 
   relocate(`Mean DBH 2014`, .before = `Mean DBH 2023`) %>% 
   mutate(`Years Null DBH to 2023 DBH` = 9) %>% 
   mutate(`Null to 2023 Growth Rate` = `Mean DBH 2023`/`Years Null DBH to 2023 DBH`) %>% 
   mutate(Plot_Label = "P")
 
-P_simplified <- P_summary %>% select(PlotID, Species, Shaded, `Planting_Year`, `Null to 2023 Growth Rate`) %>% rename(Growth_Rate = `Null to 2023 Growth Rate`) %>% 
+i_2023_P_simplified <- i_2023_P_summary %>% select(PlotID, Species, Shaded, `Planting_Year`, `Null to 2023 Growth Rate`) %>% rename(Growth_Rate = `Null to 2023 Growth Rate`) %>% 
   mutate(Age = 12) %>% mutate(Femel_size = 0.1) %>% filter(Shaded != "p")
 
-colnames(P_simplified)
+colnames(i_2023_P_simplified)
 
 # joining Sachsenforst femels
-All_joined <- Fieldwork_summary %>% left_join(GJ_summary) %>% relocate(`Mean DBH 2010`, .after = Shaded) %>% relocate(`N 2010`, .after = `Mean DBH 2010`) %>% relocate(Shaded, .after = `N 2023`) %>% 
+i_2010_2023_joined <- i_2023_summary %>% left_join(i_2010_summary) %>% relocate(`Mean DBH 2010`, .after = Shaded) %>% relocate(`N 2010`, .after = `Mean DBH 2010`) %>% relocate(Shaded, .after = `N 2023`) %>% 
   mutate(
     `Planting Year` = case_when(PlotID %in% c("15") ~ "1997", 
     TRUE ~ `PlotID`),
@@ -82,7 +83,7 @@ All_joined <- Fieldwork_summary %>% left_join(GJ_summary) %>% relocate(`Mean DBH
   relocate(`Planting Year`, .after = Species) %>% 
   select(-Species_Adjusted)
 
-All_joined$`Planting Year` <- as.numeric(All_joined$`Planting Year`)
+i_2010_2023_joined$`Planting Year` <- as.numeric(i_2010_2023_joined$`Planting Year`)
 
 # Time from 0 DBH at planting to 2010 DBH (2007 and 2020 used instead of 2010 and 2023 because foresters said trees take ~3 years to reach 1.3m DBH)
 Null_2010_2023_DBH <- All_joined %>% mutate(`Years Null DBH to 2010 DBH` = 2007-`Planting Year`) %>% relocate(`Years Null DBH to 2010 DBH`, .after = `Planting Year`) %>% 
@@ -130,7 +131,7 @@ Sachsenforst_Paußnitz_condensed$Age <- as.numeric(Sachsenforst_Paußnitz_conden
 Sachsenforst_Paußnitz_condensed$Femel_size <- as.character(Sachsenforst_Paußnitz_condensed$Femel_size)
 
 
-## Bringing in LL rates (already calculated by Lucian)
+## Bringing in LL rates (already calculated by Lucian Elles)
 
 LL_rates <- read.csv("[insert file path]") %>% select(sp_adj, cl, period, growth_rate, mort_annual) %>% rename(Species = sp_adj) %>%
   rename(Growth_Rate = growth_rate) %>% rename(Mortality_Rate = mort_annual) %>%
