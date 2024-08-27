@@ -11,7 +11,7 @@ library(openxlsx)
 library(ggplot2)
 
 ## Loading in data
-i_2023_Data <- read.xlsx("[insert file path to Adjusted_auwald_data_femel_Sachsenforst_2023.xlsx in Femel Inventory Data]") %>% 
+i_2023_Data <- read.xlsx("[insert file path to Inventory_Data_2023.xlsx in Femel Inventory Data]") %>% 
   mutate(DBH = DBH_mm/10) %>% select(-c(DBH_mm, Comments)) %>% relocate(DBH, .after = Species)
 
 ## Individuals
